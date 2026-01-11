@@ -38,14 +38,29 @@
       margin: 0 auto;
     }
 
-    /* Language Switcher */
-    #languageSwitcher {
+    /* Modern Flag Buttons */
+    .lang-switch {
       position: absolute;
       top: 20px;
       right: 20px;
-      padding: 6px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
+      display: flex;
+      gap: 10px;
+    }
+
+    .flag-btn {
+      width: 42px;
+      height: 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid #ddd;
+      transition: 0.2s;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .flag-btn:hover {
+      transform: scale(1.1);
+      border-color: var(--primary);
     }
 
     .hero {
@@ -127,10 +142,15 @@
 <body>
 
   <header>
-    <select id="languageSwitcher" onchange="switchLanguage()">
-      <option value="de">Deutsch</option>
-      <option value="en">English</option>
-    </select>
+
+    <!-- Modern Flag Switcher -->
+    <div class="lang-switch">
+      <div class="flag-btn" onclick="switchLanguage('de')" 
+           style="background-image:url('https://flagcdn.com/w40/de.png');"></div>
+
+      <div class="flag-btn" onclick="switchLanguage('en')" 
+           style="background-image:url('https://flagcdn.com/w40/gb.png');"></div>
+    </div>
 
     <div class="logo">
       <img src="https://raw.githubusercontent.com/herceg133/url/85f581127a70bd581d66e6fb0c53f92d6d9761c8/herceg-lusic5050.jpg" alt="Logo HERCEG LUŠIĆ">
@@ -219,4 +239,52 @@
   </footer>
 
   <script>
-    document.getElementById("year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const translations = {
+      de: {
+        heroText: "Professionelle Unternehmensdienstleistungen",
+        navProfil: "Profil",
+        navKontakt: "Kontakt",
+        navImpressum: "Impressum",
+        navDatenschutz: "Datenschutz",
+        profilTitle: "Profil",
+        profilText1: "Die HERCEG LUŠIĆ UG existiert seit 2014 und steht für professionelle, strukturierte und verantwortungsbewusste Unternehmensdienstleistungen.",
+        profilText2: "Unsere internen Qualitätskontrollen stellen sicher, dass jeder Auftrag mit größter Zuverlässigkeit ausgeführt wird.",
+        profilText3: "Durch klare Prozesse, nachvollziehbare Dokumentation und effiziente Abläufe erzielen wir überzeugende Ergebnisse.",
+        contactTitle: "Kontakt",
+        impressumTitle: "Impressum",
+        datenschutzTitle: "Datenschutz",
+        datenschutzText1: "Der Schutz Ihrer personenbezogenen Daten ist uns wichtig.",
+        datenschutzText2: "Diese Website verarbeitet selbst keine personenbezogenen Daten, erhebt keine Cookies und nutzt keine Tracking‑ oder Analysewerkzeuge.",
+        datenschutzText3: "Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen übermittelten Informationen ausschließlich zur Bearbeitung Ihres Anliegens verwendet."
+      },
+      en: {
+        heroText: "Professional Corporate Services",
+        navProfil: "Profile",
+        navKontakt: "Contact",
+        navImpressum: "Legal Notice",
+        navDatenschutz: "Privacy Policy",
+        profilTitle: "Company Profile",
+        profilText1: "HERCEG LUŠIĆ UG has existed since 2014 and stands for professional, structured and responsible corporate services.",
+        profilText2: "Our internal quality controls ensure that every assignment is carried out with the highest level of reliability.",
+        profilText3: "Clear processes, transparent documentation and efficient workflows ensure convincing results.",
+        contactTitle: "Contact",
+        impressumTitle: "Legal Notice",
+        datenschutzTitle: "Privacy Policy",
+        datenschutzText1: "The protection of your personal data is important to us.",
+        datenschutzText2: "This website does not process personal data, does not use cookies and does not use tracking or analytics tools.",
+        datenschutzText3: "If you contact us by email, the information you provide will only be used to process your request."
+      }
+    };
+
+    function switchLanguage(lang) {
+      for (const id in translations[lang]) {
+        document.getElementById(id).textContent = translations[lang][id];
+      }
+    }
+  </script>
+
+</body>
+</html>
+
