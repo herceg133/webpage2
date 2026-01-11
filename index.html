@@ -4,14 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HERCEG LUŠIĆ UG</title>
-  <meta name="description" content="HERCEG LUŠIĆ UG – Professionelle Lösungen für vielfältige Anforderungen." />
+  <meta name="description" content="HERCEG LUŠIĆ UG – Professionelle Unternehmenslösungen." />
+
   <style>
     :root {
       --primary: #1e3a8a;
       --accent: #3b82f6;
       --background: #f9fafb;
       --text: #1f2937;
+      --white: #ffffff;
     }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -19,18 +22,38 @@
       color: var(--text);
       line-height: 1.6;
     }
+
+    /* HEADER */
     header {
-      background: white;
+      background: var(--white);
       text-align: center;
       padding: 2rem 1rem 1rem;
       border-bottom: 1px solid #e5e7eb;
     }
+
     .logo img {
-      max-width: 240px;
+      max-width: 260px;
       height: auto;
       display: block;
       margin: 0 auto;
     }
+
+    /* HERO SECTION */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* NAVIGATION */
     nav {
       background: var(--primary);
       color: white;
@@ -40,33 +63,50 @@
       padding: 0.75rem 1rem;
       font-size: 0.95rem;
     }
+
     nav a {
       color: #e0e7ff;
       text-decoration: none;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
+    /* MAIN CONTENT */
     main {
       max-width: 960px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
+
     section {
       background: white;
       padding: 1.5rem;
       margin-bottom: 1.5rem;
       border-radius: 6px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
     }
+
     section h2 {
       margin-top: 0;
       font-size: 1.3rem;
       color: var(--primary);
     }
+
+    .image-block {
+      width: 100%;
+      height: 220px;
+      border-radius: 6px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+    }
+
     .small {
       font-size: 0.9rem;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -76,36 +116,58 @@
     }
   </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header>
     <div class="logo">
-      <img src="https://raw.githubusercontent.com/herceg133/url/85f581127a70bd581d66e6fb0c53f92d6d9761c8/herceg-lusic5050.jpg" alt="Logo HERCEG LUŠIĆ Solutions" />
+      <img src="https://raw.githubusercontent.com/herceg133/url/85f581127a70bd581d66e6fb0c53f92d6d9761c8/herceg-lusic5050.jpg" alt="Logo HERCEG LUŠIĆ">
     </div>
   </header>
 
+  <!-- HERO IMAGE -->
+  <div class="hero">
+    Professionelle Unternehmenslösungen
+  </div>
+
+  <!-- NAVIGATION -->
   <nav>
-    <a href="#ueber-uns">Profil</a>
+    <a href="#profil">Profil</a>
     <a href="#kontakt">Kontakt</a>
     <a href="#impressum">Impressum</a>
     <a href="#datenschutz">Datenschutz</a>
   </nav>
 
+  <!-- MAIN CONTENT -->
   <main>
-    <section id="ueber-uns">
+
+    <section id="profil">
       <h2>Profil</h2>
+
+      <div class="image-block" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');"></div>
+
       <p>
-        HERCEG LUŠIĆ UG steht für professionelle Lösungen in unterschiedlichen Bereichen.  
-        Unsere Arbeitsweise ist geprägt von Klarheit, Struktur und Verlässlichkeit.  
-        Wir begleiten Prozesse, analysieren Sachverhalte und schaffen nachvollziehbare Ergebnisse.
+        Die HERCEG LUŠIĆ UG steht für professionelle, strukturierte und diskrete Unternehmenslösungen.
+        Unsere Tätigkeitsfelder sind vielseitig und richten sich nach den individuellen Anforderungen unserer Auftraggeber.
+        Wir arbeiten zuverlässig, analytisch und mit einem hohen Anspruch an Qualität und Vertraulichkeit.
+      </p>
+
+      <p>
+        Durch klare Prozesse, nachvollziehbare Dokumentation und effiziente Abläufe schaffen wir Ergebnisse,
+        die in geschäftlichen, organisatorischen und administrativen Bereichen überzeugen.
       </p>
     </section>
 
     <section id="kontakt">
       <h2>Kontakt</h2>
+
+      <div class="image-block" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80');"></div>
+
       <p class="small">
-        <strong>Adresse:</strong> Sigmund-Schuckert-Str. 30, 90596 Schwanstetten<br />
-        <strong>Telefon:</strong> +49 (0)9170 777 9826<br />
-        <strong>Fax:</strong> +49 (0)911 9684 4963<br />
+        <strong>Adresse:</strong> Sigmund-Schuckert-Str. 30, 90596 Schwanstetten<br>
+        <strong>Telefon:</strong> +49 (0)9170 777 9826<br>
+        <strong>Fax:</strong> +49 (0)911 9684 4963<br>
         <strong>E-Mail:</strong> <a href="mailto:info@herceg-lusic.de">info@herceg-lusic.de</a>
       </p>
     </section>
@@ -113,30 +175,31 @@
     <section id="impressum">
       <h2>Impressum</h2>
       <p class="small">
-        <strong>Unternehmen:</strong> HERCEG LUSIC UG (haftungsbeschränkt)<br />
-        <strong>Geschäftsführer:</strong> Oliver Lusic, Matija Lusic<br />
-        <strong>Registergericht:</strong> Amtsgericht Nürnberg<br />
-        <strong>Handelsregisternummer:</strong> HRB 38742<br />
-        <strong>Adresse:</strong> Sigmund-Schuckert-Str. 30, 90596 Schwanstetten<br />
+        <strong>Unternehmen:</strong> HERCEG LUSIC UG (haftungsbeschränkt)<br>
+        <strong>Geschäftsführer:</strong> Oliver Lusic, Matija Lusic<br>
+        <strong>Registergericht:</strong> Amtsgericht Nürnberg<br>
+        <strong>Handelsregisternummer:</strong> HRB 38742<br>
+        <strong>Adresse:</strong> Sigmund-Schuckert-Str. 30, 90596 Schwanstetten<br>
         <strong>E-Mail:</strong> info@herceg-lusic.de
       </p>
     </section>
 
     <section id="datenschutz">
       <h2>Datenschutz</h2>
+
       <p class="small">
-        Diese Website verwendet keine Cookies und erhebt keine personenbezogenen Daten.  
-        E-Mails werden vertraulich behandelt. Sollten Sie nicht der vorgesehene Empfänger sein, löschen Sie die Nachricht bitte vollständig und informieren Sie uns.
+        Der Schutz Ihrer personenbezogenen Daten ist uns wichtig.  
+        Diese Website verarbeitet selbst keine personenbezogenen Daten, erhebt keine Cookies und nutzt keine Tracking‑ oder Analysewerkzeuge.
       </p>
-    </section>
-  </main>
 
-  <footer>
-    &copy; <span id="year"></span> HERCEG LUSIC UG – Alle Rechte vorbehalten.
-  </footer>
+      <p class="small">
+        Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen übermittelten Informationen ausschließlich zur Bearbeitung Ihres Anliegens verwendet.
+        Eine Weitergabe an Dritte erfolgt nicht, es sei denn, wir sind gesetzlich dazu verpflichtet.
+      </p>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+      <p class="small">
+        Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann.
+        Für besonders vertrauliche Informationen empfehlen wir eine vorherige Abstimmung über alternative Übertragungswege.
+      </p>
+
+
