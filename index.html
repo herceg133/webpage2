@@ -28,6 +28,7 @@
       text-align: center;
       padding: 2rem 1rem 1rem;
       border-bottom: 1px solid #e5e7eb;
+      position: relative;
     }
 
     .logo img {
@@ -35,6 +36,16 @@
       height: auto;
       display: block;
       margin: 0 auto;
+    }
+
+    /* Language Switcher */
+    #languageSwitcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
     }
 
     .hero {
@@ -116,65 +127,66 @@
 <body>
 
   <header>
+    <select id="languageSwitcher" onchange="switchLanguage()">
+      <option value="de">Deutsch</option>
+      <option value="en">English</option>
+    </select>
+
     <div class="logo">
       <img src="https://raw.githubusercontent.com/herceg133/url/85f581127a70bd581d66e6fb0c53f92d6d9761c8/herceg-lusic5050.jpg" alt="Logo HERCEG LUŠIĆ">
     </div>
   </header>
 
-  <div class="hero">
+  <div class="hero" id="heroText">
     Professionelle Unternehmensdienstleistungen
   </div>
 
   <nav>
-    <a href="#profil">Profil</a>
-    <a href="#kontakt">Kontakt</a>
-    <a href="#impressum">Impressum</a>
-    <a href="#datenschutz">Datenschutz</a>
+    <a href="#profil" id="navProfil">Profil</a>
+    <a href="#kontakt" id="navKontakt">Kontakt</a>
+    <a href="#impressum" id="navImpressum">Impressum</a>
+    <a href="#datenschutz" id="navDatenschutz">Datenschutz</a>
   </nav>
 
   <main>
 
     <!-- PROFIL -->
     <section id="profil">
-      <h2>Profil</h2>
+      <h2 id="profilTitle">Profil</h2>
 
-      <!-- NEUES PROFIL-BILD -->
       <div class="image-block" style="background-image:url('https://raw.githubusercontent.com/herceg133/url/9ef7d3a75e6550f3ea1987bc6a42469aeda91474/hunters-race-MYbhN8KaaEc-unsplash.jpg');"></div>
 
-      <p>
+      <p id="profilText1">
         Die HERCEG LUŠIĆ UG existiert seit 2014 und steht für professionelle, strukturierte und verantwortungsbewusste Unternehmensdienstleistungen.
-        Seit Beginn setzen wir auf geschultes und engagiertes Personal, das mit hoher Sorgfalt und Präzision arbeitet.
       </p>
 
-      <p>
+      <p id="profilText2">
         Unsere internen Qualitätskontrollen stellen sicher, dass jeder Auftrag mit größter Zuverlässigkeit ausgeführt wird.
-        Dieser strukturierte Ansatz sorgt bei unseren Auftraggebern für einen nachhaltigen Zufriedenheitseffekt und stärkt das Vertrauen in unsere Arbeitsweise.
       </p>
 
-      <p>
-        Durch klare Prozesse, nachvollziehbare Dokumentation und effiziente Abläufe erzielen wir Ergebnisse,
-        die in geschäftlichen, organisatorischen und administrativen Bereichen überzeugen.
+      <p id="profilText3">
+        Durch klare Prozesse, nachvollziehbare Dokumentation und effiziente Abläufe erzielen wir überzeugende Ergebnisse.
       </p>
     </section>
 
     <!-- KONTAKT -->
     <section id="kontakt">
-      <h2>Kontakt</h2>
+      <h2 id="contactTitle">Kontakt</h2>
 
       <div class="image-block" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80');"></div>
 
-      <p class="small">
+      <p class="small" id="contactText">
         <strong>Adresse:</strong> Sigmund-Schuckert-Str. 30, 90596 Schwanstetten<br>
         <strong>Telefon:</strong> +49 (0)9170 777 9826<br>
         <strong>Fax:</strong> +49 (0)911 9684 4963<br>
-        <strong>E-Mail:</strong> <a href="mailto:info@herceg-lusic.de">info@herceg-lusic.de</a>
+        <strong>E-Mail:</strong> info@herceg-lusic.de
       </p>
     </section>
 
     <!-- IMPRESSUM -->
     <section id="impressum">
-      <h2>Impressum</h2>
-      <p class="small">
+      <h2 id="impressumTitle">Impressum</h2>
+      <p class="small" id="impressumText">
         <strong>Unternehmen:</strong> HERCEG LUŠIĆ UG (haftungsbeschränkt)<br>
         <strong>Adresse:</strong> Sigmund-Schuckert-Str. 30, 90596 Schwanstetten<br>
         <strong>E-Mail:</strong> info@herceg-lusic.de<br>
@@ -185,26 +197,18 @@
 
     <!-- DATENSCHUTZ -->
     <section id="datenschutz">
-      <h2>Datenschutz</h2>
+      <h2 id="datenschutzTitle">Datenschutz</h2>
 
-      <p class="small">
-        Der Schutz Ihrer personenbezogenen Daten ist uns wichtig.  
+      <p class="small" id="datenschutzText1">
+        Der Schutz Ihrer personenbezogenen Daten ist uns wichtig.
+      </p>
+
+      <p class="small" id="datenschutzText2">
         Diese Website verarbeitet selbst keine personenbezogenen Daten, erhebt keine Cookies und nutzt keine Tracking‑ oder Analysewerkzeuge.
       </p>
 
-      <p class="small">
+      <p class="small" id="datenschutzText3">
         Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen übermittelten Informationen ausschließlich zur Bearbeitung Ihres Anliegens verwendet.
-        Eine Weitergabe an Dritte erfolgt nicht, es sei denn, wir sind gesetzlich dazu verpflichtet.
-      </p>
-
-      <p class="small">
-        Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann.
-        Für besonders vertrauliche Informationen empfehlen wir eine vorherige Abstimmung über alternative Übertragungswege.
-      </p>
-
-      <p class="small">
-        Sollten Sie versehentlich eine E-Mail erhalten haben, die nicht für Sie bestimmt ist, löschen Sie diese bitte vollständig
-        und informieren Sie uns unverzüglich.
       </p>
     </section>
 
@@ -215,9 +219,4 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
-</body>
-</html>
-
+    document.getElementById("year
